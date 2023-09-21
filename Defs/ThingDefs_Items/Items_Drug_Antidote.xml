@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>SW_RevivalFluid</defName>
+    <label>Revival Fluid</label>
+    <description>A medicinal drug that quickly counters the effects of petrification. </description>
+    <descriptionHyperlinks>
+      <HediffDef>SW_RevivalFluid</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/GoJuice</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass> 
+      <color>(80,50,100)</color>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>500</WorkToMake>
+      <MarketValue>250</MarketValue>
+      <Mass>0.1</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <researchPrerequisite>SW_NitalResearch</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Beer>5</Beer>
+	  <Chemfuel>5</Chemfuel>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1001</listOrder>
+        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- <HediffDef>
+    <defName>SW_Antidote</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>Curing petrification.</label>
+    <description>This creature is being cured of petrification.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>	
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-50</severityPerDay>
+        <showHoursToRecover>false</showHoursToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <makeImmuneTo>
+          <li>SW_Petrification</li>
+          <li>SW_Petrification_Complete</li>
+        </makeImmuneTo>
+      </li>
+    </stages>
+  </HediffDef> -->
+
+</Defs>

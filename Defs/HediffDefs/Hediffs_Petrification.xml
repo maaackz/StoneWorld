@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef ParentName="InfectionBase">
+    <defName>SW_Petrification_Complete</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>full petrification</label>
+    <defaultLabelColor>(0.5, 0.5, 0.5)</defaultLabelColor>
+    <description>The victim has been turned to stone.</description>
+    <makesSickThought>true</makesSickThought>
+    <stages>
+      <li>
+        <label></label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>.1</setMax>
+          </li>
+        </capMods>
+        <statFactors>
+          <HungerRateMultiplier>0</HungerRateMultiplier>
+          <ImmunityGainSpeed>5</ImmunityGainSpeed>
+          <InjuryHealingFactor>0</InjuryHealingFactor>
+        </statFactors>
+        <totalBleedFactor>0</totalBleedFactor>
+      </li>
+    </stages>
+  </HediffDef> 
+  
+  <HediffDef ParentName="InfectionBase">
+    <defName>SW_Petrification</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>petrification</label>
+    <defaultLabelColor>(0.5, 0.5, 0.5)</defaultLabelColor>
+    <description>The victim has been turned to stone.</description>
+    <makesSickThought>true</makesSickThought>
+    <tendable>true</tendable>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>1</baseTendDurationHours>
+        <severityPerDayTended>-99999</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>.5</severityPerDayNotImmune>
+        <immunityPerDaySick>0.25	</immunityPerDaySick>
+        <severityPerDayImmune>-999999999</severityPerDayImmune>
+        <immunityPerDayNotSick>-10</immunityPerDayNotSick>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label></label>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.15</offset>
+          </li>
+		  <li>
+            <capacity>Consciousness</capacity>
+            <setMax>.1</setMax>
+          </li>
+		  <statFactors>
+          <HungerRateMultiplier>0</HungerRateMultiplier>
+          <ImmunityGainSpeed>99999</ImmunityGainSpeed>
+          <InjuryHealingFactor>0</InjuryHealingFactor>
+        </statFactors>
+        <totalBleedFactor>0</totalBleedFactor>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  
+</Defs>
